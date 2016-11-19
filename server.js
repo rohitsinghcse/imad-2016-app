@@ -10,7 +10,7 @@ var config = {
     port :'5432',
     password :process.env.DB-PASSWORD 
         
-}
+};
 var app = express();
 app.use(morgan('combined'));
 
@@ -130,7 +130,7 @@ app.get('/submit-name',function (req,res) { //submit-name?name=xxxxx
 app.get('/:articleName',function (req,res) {
   var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
-})
+});
 
 // app.get('/article-one',function(req,res)
 // {
