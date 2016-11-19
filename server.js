@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 
+var pool= new Pool(config) ;
 var config = {
     user : 'rohitsinghcse',
     database : 'rohitsinghcse',
@@ -101,7 +102,6 @@ app.get('/counter',function (req,res) {
   res.send(counter.toString());
 });
 
-var pool= new Pool(config) ;
 app.get('/test-db',function(req,res){
    //make a select request 
    pool.query('SELECT * from test',function(err,result){
