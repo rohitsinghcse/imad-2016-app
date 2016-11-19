@@ -20,7 +20,7 @@ app.use(morgan('combined'));
 
 var articles ={
    'article-one'  :{  //object
-    title : 'Article-one | Rohit Singh',
+    title : 'Article-one Rohit Singh',
     heading : 'Article-one',
     date :  'Sep 5, 2016',
     content : `
@@ -41,7 +41,7 @@ var articles ={
     </p>`
   },
    'article-two' : {
-     title : 'Article-two | Rohit Singh',
+     title : 'Article-two Rohit Singh',
      heading : 'article-two',
      date :  'Sep 15, 2016',
      content : `
@@ -51,7 +51,7 @@ var articles ={
     `
      },
     'article-three' : {
-     title : 'article-three | Rohit Singh',
+     title : 'article-three  Rohit Singh',
      heading : 'Article-three',
      date :  'Sep 25, 2016',
      content : `
