@@ -145,7 +145,6 @@ pool.query("SELECT * FROM articleNov WHERE title ="+req.params.articleName,funct
   }
 
 });
-res.send(createTemplate(articleData));
 });
 
 // app.get('/:articleName',function (req,res) {
