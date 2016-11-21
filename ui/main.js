@@ -42,7 +42,7 @@ login.onclick = function () {
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
    //make the request
-    request.open('POST','rohitsinghcse.imad.hasura-app.io/login');
+    request.open('POST','http://rohitsinghcse.imad.hasura-app.io/login');
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({username:username,password:password}));
       
