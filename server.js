@@ -128,7 +128,7 @@ app.post('/register-user',function(req,res){
     res.status(500).send(err.toString());
   }
   else{
-    res.send('User created successfully'+uname);
+    res.status(200).send('User created successfully'+uname);
   }
  })
 });
