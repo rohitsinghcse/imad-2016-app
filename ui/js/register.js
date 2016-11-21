@@ -16,8 +16,8 @@ register.onclick = function () {
   };
   
   //registration module
-  var username = document.getElementById('user').value;
-  var password = document.getElementById('pass').value;
+  var user = document.getElementById('user').value;
+  var pass = document.getElementById('pass').value;
   console.log(user);
   console.log(pass);
    //make the request
