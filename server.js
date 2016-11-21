@@ -135,25 +135,25 @@ app.post('/register-user',function(req,res){
 //register user end
 
 //create user start
- app.post('/create-user',function(req,res){
-    //username ,password
-    //JSON request
-    console.log('inside create user');
-    var newUsername = req.body.newUsername; //Request body req.body
-    var newPassword = req.body.newPassword;
-    var salt = crypto.randomBytes(128).toString('hex');
-    var dbString = hash(newPassword,salt);
-    pool.query('INSERT INTO "users" (username,password) VALUES ($1,$2)',[newUsername,dbString],function(err,result){
-      if(err){
-            console.log("inside 500");
-            res.status(500).send(err.toString());
+//  app.post('/create-user',function(req,res){
+//     //username ,password
+//     //JSON request
+//     console.log('inside create user');
+//     var newUsername = req.body.newUsername; //Request body req.body
+//     var newPassword = req.body.newPassword;
+//     var salt = crypto.randomBytes(128).toString('hex');
+//     var dbString = hash(newPassword,salt);
+//     pool.query('INSERT INTO "users" (username,password) VALUES ($1,$2)',[newUsername,dbString],function(err,result){
+//       if(err){
+//             console.log("inside 500");
+//             res.status(500).send(err.toString());
           
-      } 
-      else{
-           res.status(200).send('User successfully created'+username);
-      }
-    });
-});
+//       } 
+//       else{
+//           res.status(200).send('User successfully created'+username);
+//       }
+//     });
+// });
 
 //create user end
 
