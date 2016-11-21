@@ -131,7 +131,7 @@ app.get('/hash/:input',function(req,res){
           
       } 
       else{
-           res.send('User successfully created'+username);
+           res.status(200).send('User successfully created'+username);
       }
     });
 });
