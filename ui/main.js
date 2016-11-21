@@ -87,7 +87,7 @@ submit.onclick = function () {
  //make a request to the server and send the name
 
  //capture a list of names and render it as a list
-}
+};
 
 
 
