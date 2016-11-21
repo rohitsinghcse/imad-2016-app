@@ -124,7 +124,7 @@ app.get('/hash/:input',function(req,res){
     var newPassword = req.body.newPassword;
     var salt = crypto.randomBytes(128).toString('hex');
     var dbString = hash(newPassword,salt);
-    pool.query('INSERT INTO USERS (username,password) VALUES ($1,$2)',[newUsername,dbString],function(err,result){
+    pool.query('INSERT INTO "users" (username,password) VALUES ($1,$2)',[newUsername,dbString],function(err,result){
       if(err){
             console.log("inside 500");
             res.status(500).send(err.toString());
