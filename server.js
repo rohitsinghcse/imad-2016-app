@@ -117,6 +117,23 @@ app.get('/hash/:input',function(req,res){
 });
 
 var pool= new Pool(config);
+//register user start
+app.post('/register-user',function(req,res){
+ var uname = req.body.uname;
+ var passwd =req.body.passwd;
+ var salt = crypto.randomBytes(128).toString('hex');
+ var dbString = hash(passwd,salt);
+ pool.query('INSERT INTO users (username,password) VALUES ($1,$2)',[uname,dbString],function(err,result){
+  if(err){
+    res.status(500).send(err.toString());
+  }
+  else{
+    res.send('User created successfully'+uname);
+  }
+ })
+});
+//register user end
+
 //create user start
  app.post('/create-user',function(req,res){
     //username ,password
