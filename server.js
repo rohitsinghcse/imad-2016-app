@@ -180,9 +180,7 @@ app.post('/login',function(req,res){
     });
 });
 
-//registration module start
 
-//registration module end
 
 var pool= new Pool(config);
 
