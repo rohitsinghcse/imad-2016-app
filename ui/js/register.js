@@ -15,13 +15,13 @@ register.onclick = function () {
   };
   
   //registration module
-  var username = document.getElementById('user').value;
-  var password = document.getElementById('pass').value;
-  console.log(username);
-  console.log(password);
+  var newUsername = document.getElementById('user').value;
+  var newPassword = document.getElementById('pass').value;
+  console.log(newUsername);
+  console.log(newPassword);
    //make the request
     request.open('POST','http://rohitsinghcse.imad.hasura-app.io/create-user');
     request.setRequestHeader('Content-Type','application/json');
-    request.send(JSON.stringify({username:username,password:password}));
+    request.send(JSON.stringify({newUsername:newUsername,newPassword:newPassword}));
     
 };
