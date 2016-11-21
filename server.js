@@ -132,24 +132,24 @@ app.post('/create-user',function(req,res){
           res.status(500).send(err.toString());
           
       } 
-      else{
-          if(results.rows.length===0){
-            res.send(403).send('Username or password is invalid');
-          }
-          else{
-          //Match the password
-              var dbString = result.rows[0].password;
-              var salt = dbString.split('$')[2];
-              var hashedPassword = hash(password,salt);
-              if(hashedPassword === dbString){
-                res.send("Credentials are correct");
-              }
-              else{
-                res.send(403).send('Username or password is invalid');
-              }
-          }
-          res.send('User successfully created'+username);
-      }
+    //   else{
+    //       if(results.rows.length===0){
+    //         res.send(403).send('Username or password is invalid');
+    //       }
+    //       else{
+    //       //Match the password
+    //           var dbString = result.rows[0].password;
+    //           var salt = dbString.split('$')[2];
+    //           var hashedPassword = hash(password,salt);
+    //           if(hashedPassword === dbString){
+    //             res.send("Credentials are correct");
+    //           }
+    //           else{
+    //             res.send(403).send('Username or password is invalid');
+    //           }
+    //       }
+    //       res.send('User successfully created'+username);
+    //   }
     });
 });
 
