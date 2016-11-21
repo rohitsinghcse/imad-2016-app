@@ -44,7 +44,7 @@ login.onclick = function () {
    //make the request
     request.open('POST','http://rohitsinghcse.imad.hasura-app.io/login');
     request.setRequestHeader('Content-Type','application/json');
-    request.send(JSON.stringify({username:"username",password:"password"}));
+    request.send(JSON.stringify({username:username,password:password}));
       
 };
 
