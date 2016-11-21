@@ -130,7 +130,7 @@ app.post('/register-user',function(req,res){
   else{
     res.status(200).send('User created successfully'+uname);
   }
- })
+ });
 });
 //register user end
 
