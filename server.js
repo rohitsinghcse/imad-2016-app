@@ -119,7 +119,7 @@ app.get('/hash/:input',function(req,res){
 
 app.post('/create-user',function(req,res){
     //username ,password
-    //JSN request
+    //JSON request
     var username = req.body.username; //Request body req.body
     var password = req.body.password;
     var salt = crypto.randomBytes(128).toString('hex');
