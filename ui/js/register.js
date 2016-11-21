@@ -8,9 +8,9 @@ register.onclick = function () {
       if(request.status === 200){
           alert('Registration successful');
       }
-      else if (request.status ===500){
+      else if(request.status ===500){
           alert('Something went wrong with the server');
-      }
+        }
     }
   };
   
