@@ -115,8 +115,8 @@ app.get('/hash/:input',function(req,res){
     var hashedString = hash(req.params.input,'this-is-some-random-string');
     res.send(hashedString);
 });
-
-app.post('/create-user',function(req,res){
+//create user start
+ app.post('/create-user',function(req,res){
     //username ,password
     //JSON request
     console.log('inside create user');
@@ -131,25 +131,12 @@ app.post('/create-user',function(req,res){
           
       } 
       else{
-        //   if(results.rows.length===0){
-            // res.send(403).send('Username or password is invalid');
-    //       }
-    //       else{
-    //       //Match the password
-    //           var dbString = result.rows[0].password;
-    //           var salt = dbString.split('$')[2];
-    //           var hashedPassword = hash(newPassword,salt);
-    //           if(hashedPassword === dbString){
-    //             res.send("Credentials are correct");
-    //           }
-            //   else{
-            //     res.send(403).send('Username or password is invalid');
-            //   }
-        //   }
-          res.send('User successfully created'+username);
+           res.send('User successfully created'+username);
       }
     });
 });
+
+//create user end
 
 app.post('/login',function(req,res){
     var username = req.body.username; //Request body req.body
