@@ -25,3 +25,4 @@ register.onclick = function () {
     newRequest.send(JSON.stringify({newUsername:newUsername,newPassword:newPassword}));
     
 };
+
