@@ -120,8 +120,8 @@ app.get('/hash/:input',function(req,res){
 app.post('/create-user',function(req,res){
     //username ,password
     //JSON request
-    var username = req.body.username; //Request body req.body
-    var password = req.body.password;
+    var username = req.body.user; //Request body req.body
+    var password = req.body.pass;
     var salt = crypto.randomBytes(128).toString('hex');
     var dbString = hash(password,salt);
     pool.query('INSERT INTO USERS (username,password) VALUES ($1,$2)',[username,dbString],function(err,result){
@@ -175,6 +175,10 @@ app.post('/login',function(req,res){
       }
     });
 });
+
+//registration module start
+
+//registration module end
 
 var pool= new Pool(config);
 
