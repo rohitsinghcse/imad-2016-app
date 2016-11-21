@@ -65,9 +65,6 @@ register.onclick = function () {
        console.log('user logged in');
        alert('Registration successful');
       }
-      else if (request.status ===403){
-          alert('username/password is incorrect');
-      }
       else if (request.status ===500){
           alert('Something went wrong with the server');
       }
