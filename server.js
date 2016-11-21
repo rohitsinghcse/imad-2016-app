@@ -116,7 +116,7 @@ app.get('/hash/:input',function(req,res){
     res.send(hashedString);
 });
 
-app.post('/create-user',function(req,res){
+//app.post('/create-user',function(req,res){
     //username ,password
     //JSON request
     console.log('inside create user');
@@ -155,7 +155,7 @@ app.post('/create-user',function(req,res){
 app.post('/login',function(req,res){
     var username = req.body.username; //Request body req.body
     var password = req.body.password;
-    pool.query('SELECT * FROM USERS WHERE username = $1 ' ,'[username]',function(err,result){
+    pool.query('SELECT * FROM USERS WHERE username = $1 ' ,[username],function(err,result){
       if(err){
           res.status(500).send(err.toString());
       } 
