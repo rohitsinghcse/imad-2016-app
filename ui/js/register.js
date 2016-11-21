@@ -6,8 +6,7 @@ register.onclick = function () {
   request.onreadystatechange =function () {
     if(request.readyState === XMLHttpRequest.DONE){
       if(request.status === 200){
-       console.log('user logged in');
-       alert('Registration successful');
+          alert('Registration successful');
       }
       else if (request.status ===500){
           alert('Something went wrong with the server');
