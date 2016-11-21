@@ -162,7 +162,7 @@ app.post('/login',function(req,res){
       } 
       else {
           if(result.rows.length ===0){
-              res.send(403).send('Username/password is invalid');        
+              res.status(403).send('Username/password is invalid');        
       }else{
         //match the password
           var dbString =result.rows[0].password;
@@ -172,7 +172,7 @@ app.post('/login',function(req,res){
             res.send('Logged in ');
           }else
           {
-           res.send(403).send('Username/password is invalid');        
+           res.status(403).send('Username/password is invalid');        
           }
       }
           
