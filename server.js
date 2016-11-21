@@ -195,6 +195,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'registration.html'));
+});
+
+
 var names =[];
 app.get('/submit-name',function (req,res) { //submit-name?name=xxxxx
   //Get the name from the request
