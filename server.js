@@ -259,7 +259,7 @@ app.get('/ui/main.js',function (req,res) {
 });
 
 app.get('ui/js/register.js',function(req,res){
-    res.sendFile(path.join(__dirname,'ui/js',register.js));
+    res.sendFile(path.join(__dirname,'ui/js','register.js'));
     
 });
 
