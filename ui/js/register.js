@@ -23,6 +23,6 @@ register.onclick = function () {
    //make the request
     request.open('POST','http://rohitsinghcse.imad.hasura-app.io/create-user');
     request.setRequestHeader('Content-Type','application/json');
-    request.send(JSON.stringify({username:"user",password:"pass"}));
+    request.send(JSON.stringify({username:user,password:pass}));
       
 };
