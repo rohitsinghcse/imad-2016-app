@@ -115,6 +115,8 @@ app.get('/hash/:input',function(req,res){
     var hashedString = hash(req.params.input,'this-is-some-random-string');
     res.send(hashedString);
 });
+
+var pool= new Pool(config);
 //create user start
  app.post('/create-user',function(req,res){
     //username ,password
@@ -167,7 +169,7 @@ app.post('/login',function(req,res){
 
 
 
-var pool= new Pool(config);
+
 
 app.get('/test-db',function(req,res){
    //make a select request 
