@@ -127,13 +127,12 @@ app.post('/create-user',function(req,res){
     pool.query('INSERT INTO USERS (username,password) VALUES ($1,$2)',[newUsername,dbString],function(err,result){
       if(err){
           
-          alert('inside err');
-          res.status(500).send(err.toString());
+            res.status(500).send(err.toString());
           
       } 
       else{
-    //       if(results.rows.length===0){
-    //         res.send(403).send('Username or password is invalid');
+        //   if(results.rows.length===0){
+            // res.send(403).send('Username or password is invalid');
     //       }
     //       else{
     //       //Match the password
