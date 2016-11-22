@@ -248,7 +248,7 @@ app.get('/submit-name',function (req,res) { //submit-name?name=xxxxx
   res.send(JSON.stringify(names));
 });
 //fetch artilces from db start
-//app.get('/articles/:articleName',function(req,res){
+app.get('/articles/:articleName',function(req,res){
 // pool.query("SELECT * FROM articles WHERE title ='"+ req.params.articleName+"'",function(err,result){
     pool.query("SELECT * FROM articles WHERE title = $1",[req.params.articleName],function(err,result){
     
@@ -265,12 +265,11 @@ app.get('/submit-name',function (req,res) { //submit-name?name=xxxxx
 
 });
 });
-//fetch artilces from db end
-
-app.get('/articles/:articleName',function (req,res) {
-  var articleName = req.params.articleName;
-  res.send(createTemplate(articles[articleName]));
-});
+//fetch artilces from db start
+// app.get('/:articleName',function (req,res) {
+//   var articleName = req.params.articleName;
+//   res.send(createTemplate(articles[articleName]));
+// });
 
 // app.get('/article-one',function(req,res)
 // {
