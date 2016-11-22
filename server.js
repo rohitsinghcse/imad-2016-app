@@ -180,7 +180,10 @@ app.post('/login',function(req,res){
           var salt = dbString.split('$')[2];
           var hashedPassword = hash(password,salt);
           if(hashedPassword ===dbString){
+              //set the session
+              req.session.auth ={userId:result.rows[0].id};
             res.send('Logged in ');
+            
           }else
           {
            res.status(403).send('Username/password is invalid');        
@@ -191,7 +194,17 @@ app.post('/login',function(req,res){
     });
 });
 
+//check login endpoint starts
+    app.get('/check-login',function(req,res){
+       if(req.session && req.session.auth && req.session.auth.userId) {
+           res.send("you are logged in "+req.session.auth.userId.toString());
+       }
+       else{
+           res.send("You are not logged in ");
+       }
+    });
 
+//check login endpoint ends
 
 
 
