@@ -296,6 +296,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 app.get('/img/linkedin.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'img', 'linkedin.png'));
+});
 
 app.get('/ui/main.js',function (req,res) {
   res.sendFile(path.join(__dirname,'ui','main.js'));
