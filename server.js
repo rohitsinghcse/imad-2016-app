@@ -204,7 +204,16 @@ app.post('/login',function(req,res){
        }
     });
 
+
 //check login endpoint ends
+
+//logout endpoint starts
+    app.get('/logout',function(req,res){
+       delete  req.session.auth;
+       res.send("you are logged out");
+    });
+    
+//logout endpoint ends
 
 
 
